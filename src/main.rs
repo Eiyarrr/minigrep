@@ -4,6 +4,7 @@ use std::io::Error;
 use std::io::{BufRead, BufReader};
 
 fn main() -> Result<(), Error> {
+    clearscreen::clear().expect("Failed to clear console");
     let path = get_path();
     let query = get_query();
     println!("Searching...");
@@ -11,14 +12,18 @@ fn main() -> Result<(), Error> {
     let file = File::open(path)?;
     let reader = BufReader::new(file);
     let parsed_file = read_file(reader, &query)?;
+    print_lines(parsed_file);
+
+    Ok(())
+}
+
+fn print_lines(parsed_file: (Vec<(i32, String)>, i32)) {
     let lines_containing = parsed_file.0;
     let matches = parsed_file.1;
     println!("Found {matches} matches...");
     for line in lines_containing {
         println!("{}: {}", line.0, line.1);
     }
-
-    Ok(())
 }
 
 fn read_file(reader: BufReader<File>, query: &str) -> Result<(Vec<(i32, String)>, i32), Error> {
@@ -39,6 +44,7 @@ fn read_file(reader: BufReader<File>, query: &str) -> Result<(Vec<(i32, String)>
 
 // Add input validation
 fn get_path() -> String {
+    clearscreen::clear().expect("Failed to clear console");
     println!("Enter your file path: ");
     let mut path = String::new();
     io::stdin()
@@ -50,6 +56,7 @@ fn get_path() -> String {
 
 // Add input validation
 fn get_query() -> String {
+    clearscreen::clear().expect("Failed to clear console");
     println!("Enter your query: ");
     let mut query = String::new();
     io::stdin()
