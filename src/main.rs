@@ -5,11 +5,10 @@ use std::io::{BufRead, BufReader};
 
 fn main() -> Result<(), Error> {
     clearscreen::clear().expect("Failed to clear console");
-    let path = get_path();
+    let file = get_file();
     let query = get_query();
-    println!("Searching...");
 
-    let file = File::open(path)?;
+    println!("Searching...");
     let reader = BufReader::new(file);
     let parsed_file = read_file(reader, &query)?;
     print_lines(parsed_file);
@@ -42,19 +41,23 @@ fn read_file(reader: BufReader<File>, query: &str) -> Result<(Vec<(i32, String)>
     Ok((lines_containing, matches))
 }
 
-// Add input validation
-fn get_path() -> String {
-    clearscreen::clear().expect("Failed to clear console");
-    println!("Enter your file path: ");
-    let mut path = String::new();
-    io::stdin()
-        .read_line(&mut path)
-        .expect("Failed to read input");
-    let path = path.trim().to_string();
-    path
+fn get_file() -> File {
+    loop {
+        clearscreen::clear().expect("Failed to clear console");
+        println!("Enter your file path: ");
+        let mut path = String::new();
+        io::stdin()
+            .read_line(&mut path)
+            .expect("Failed to read input");
+        let path = path.trim().to_string();
+        match File::open(path) {
+            Ok(file) => { file },
+            Err(_) => { continue; }
+        };
+    }
 }
 
-// Add input validation
+// Doesn't need input validation because input can be literally anything
 fn get_query() -> String {
     clearscreen::clear().expect("Failed to clear console");
     println!("Enter your query: ");
