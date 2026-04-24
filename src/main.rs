@@ -1,3 +1,5 @@
+mod user_input;
+
 use std::fs::File;
 use std::io;
 use std::io::Error;
@@ -39,37 +41,4 @@ fn read_file(reader: BufReader<File>, query: &str) -> Result<(Vec<(i32, String)>
         line_number += 1;
     }
     Ok((lines_containing, matches))
-}
-
-fn get_file() -> File {
-    clearscreen::clear().expect("Failed to clear console");
-    loop {
-        println!("Enter your file path: ");
-        let mut path = String::new();
-        io::stdin()
-            .read_line(&mut path)
-            .expect("Failed to read input");
-        let path = path.trim().to_string();
-        match File::open(&path) {
-            Ok(file) => {
-                return file;
-            }
-            Err(_) => {
-                println!("Could not find file at {path}");
-                continue;
-            }
-        };
-    }
-}
-
-// Doesn't need input validation because input can be literally anything
-fn get_query() -> String {
-    clearscreen::clear().expect("Failed to clear console");
-    println!("Enter your query: ");
-    let mut query = String::new();
-    io::stdin()
-        .read_line(&mut query)
-        .expect("Failed to read input");
-    let query = query.trim();
-    query.to_string()
 }
