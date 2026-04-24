@@ -1,0 +1,197 @@
+MINIGREP TEST FILE START
+
+This is a simple line.
+Another simple line.
+Rust is fast and memory-efficient.
+RUST can be written in uppercase.
+rust can also be lowercase.
+RuSt can be mixed case.
+
+Searching for words should be fun.
+Searching for patterns should be even more fun.
+Searching for repeated words words words should work.
+
+Error: something went wrong.
+Warning: something might go wrong.
+Info: everything is working as expected.
+
+The quick brown fox jumps over the lazy dog.
+THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+the quick brown fox jumps over the lazy dog.
+
+Numbers test:
+1234567890
+0987654321
+111222333444555666777888999000
+
+Special characters:
+!@#$%^&*()_+-=[]{}|;':",.<>/?`~
+
+File paths:
+/usr/local/bin
+C:\Program Files\Rust
+./relative/path/to/file.txt
+
+Repeated patterns begin:
+alpha beta gamma alpha beta gamma alpha beta gamma
+delta epsilon zeta delta epsilon zeta delta epsilon zeta
+pattern pattern pattern pattern pattern
+
+Case sensitivity test:
+Apple
+apple
+APPLE
+ApPlE
+
+Empty lines follow:
+
+
+
+Lines with leading and trailing spaces:
+    leading spaces
+trailing spaces    
+    both sides    
+
+Long paragraph test:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate, 
+nunc sit amet varius dignissim, augue lacus pellentesque nunc, ut aliquet nunc 
+nibh at sapien. Integer nec odio nec nulla luctus viverra.
+
+Another paragraph:
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+
+Log-like entries:
+[2026-01-01 10:00:00] INFO Starting application
+[2026-01-01 10:01:00] WARN Low memory
+[2026-01-01 10:02:00] ERROR Crash detected
+[2026-01-01 10:03:00] INFO Restarting
+
+Random words section:
+cat dog bird fish lion tiger elephant giraffe zebra
+red blue green yellow purple orange black white gray
+
+More repetition:
+test test test test test test test test test test
+repeat repeat repeat repeat repeat repeat repeat repeat
+
+Edge cases:
+.
+..
+...
+....
+.....
+
+Very long lines:
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+Mixed content:
+Rust2026Version
+version2026rust
+2026rustversion
+
+Final section:
+end of file
+End Of File
+END OF FILE
+
+MINIGREP TEST FILE ENDMINIGREP TEST FILE START
+
+This is a simple line.
+Another simple line.
+Rust is fast and memory-efficient.
+RUST can be written in uppercase.
+rust can also be lowercase.
+RuSt can be mixed case.
+
+Searching for words should be fun.
+Searching for patterns should be even more fun.
+Searching for repeated words words words should work.
+
+Error: something went wrong.
+Warning: something might go wrong.
+Info: everything is working as expected.
+
+The quick brown fox jumps over the lazy dog.
+THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+the quick brown fox jumps over the lazy dog.
+
+Numbers test:
+1234567890
+0987654321
+111222333444555666777888999000
+
+Special characters:
+!@#$%^&*()_+-=[]{}|;':",.<>/?`~
+
+File paths:
+/usr/local/bin
+C:\Program Files\Rust
+./relative/path/to/file.txt
+
+Repeated patterns begin:
+alpha beta gamma alpha beta gamma alpha beta gamma
+delta epsilon zeta delta epsilon zeta delta epsilon zeta
+pattern pattern pattern pattern pattern
+
+Case sensitivity test:
+Apple
+apple
+APPLE
+ApPlE
+
+Empty lines follow:
+
+
+
+Lines with leading and trailing spaces:
+    leading spaces
+trailing spaces    
+    both sides    
+
+Long paragraph test:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate, 
+nunc sit amet varius dignissim, augue lacus pellentesque nunc, ut aliquet nunc 
+nibh at sapien. Integer nec odio nec nulla luctus viverra.
+
+Another paragraph:
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+
+Log-like entries:
+[2026-01-01 10:00:00] INFO Starting application
+[2026-01-01 10:01:00] WARN Low memory
+[2026-01-01 10:02:00] ERROR Crash detected
+[2026-01-01 10:03:00] INFO Restarting
+
+Random words section:
+cat dog bird fish lion tiger elephant giraffe zebra
+red blue green yellow purple orange black white gray
+
+More repetition:
+test test test test test test test test test test
+repeat repeat repeat repeat repeat repeat repeat repeat
+
+Edge cases:
+.
+..
+...
+....
+.....
+
+Very long lines:
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+Mixed content:
+Rust2026Version
+version2026rust
+2026rustversion
+
+Final section:
+end of file
+End Of File
+END OF FILE
+
+MINIGREP TEST FILE END
