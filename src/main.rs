@@ -26,8 +26,8 @@ fn main() -> Result<(), Error> {
 fn print_lines(parsed_file: (Vec<(i32, String)>, i32)) {
     let lines_containing = parsed_file.0;
     let matches = parsed_file.1;
-    println!("Found {matches} matches...");
     for line in lines_containing {
         println!("{}: {}", line.0, line.1);
     }
+    println!("Found {matches} matches...");
 }
