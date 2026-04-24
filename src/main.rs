@@ -3,22 +3,33 @@ mod user_input;
 
 use file_manager::read_file::read_file;
 
-use user_input::get_file::get_file;
+use user_input::get_file::get_path;
 use user_input::get_query::get_query;
 
+use std::fs::File;
 use std::io;
-use std::io::Error;
 use std::io::BufReader;
+use std::io::{Error, ErrorKind};
 
 fn main() -> Result<(), Error> {
     clearscreen::clear().expect("Failed to clear console");
-    let file = get_file();
+    let file = get_path();
     let query = get_query();
 
+    let f: Vec<File>;
+    match file {
+        Ok(a) => f = a,
+        Err(e) => {
+            return Err(Error::new(ErrorKind::Other, e));
+        }
+    };
+
     println!("Searching...");
-    let reader = BufReader::new(file);
-    let parsed_file = read_file(reader, &query)?;
-    print_lines(parsed_file);
+    for a in f.iter() {
+        let reader = BufReader::new(a);
+        let parsed_file = read_file(reader, &query)?;
+        print_lines(parsed_file);
+    }
 
     Ok(())
 }

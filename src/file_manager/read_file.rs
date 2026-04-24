@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::Error;
 use std::io::{BufRead, BufReader};
 
-pub fn read_file(reader: BufReader<File>, query: &str) -> Result<(Vec<(i32, String)>, i32), Error> {
+pub fn read_file(reader: BufReader<&File>, query: &str) -> Result<(Vec<(i32, String)>, i32), Error> {
     let mut line_number = 0;
     let mut matches = 0;
     let mut lines_containing: Vec<(i32, String)> = Vec::new();
